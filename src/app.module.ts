@@ -7,7 +7,9 @@ import { MailModule } from './mail/mail.module';
 @Module({
   imports: [
     MailModule,
-    ConfigModule.forRoot()
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],
